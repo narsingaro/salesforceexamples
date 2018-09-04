@@ -9,12 +9,25 @@ app.post('/accountupdate',function (req, res)
  console.log(req.body.s);
  console.log(typeof(req.body));
  console.log(account);
-  for(var i=0;i<account.length;i++)
+ /* for(var i=0;i<account.length;i++)
   {
     console.log('start');
   account[i].newvalue__c = account[i].Id+'     '+account[i].Name+'    '+account[i].Site;
   console.log(account[i].newvalue__c);
   console.log('end');
+}*/
+
+  for(var i=0;i<account.length;i++)
+  {
+    var text='';
+    for(var key in account[i])
+{
+  if(key!='attributes')
+  {
+    text=text + account[i].key+' ';
+  }
+}
+account[i].newvalue__c=text;
 }
 //var account1=JSON.parse(req.body[0]);
 /*var account1=JSON.stringify(req.body);
