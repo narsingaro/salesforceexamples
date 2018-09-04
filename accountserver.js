@@ -15,8 +15,18 @@ app.post('/accountupdate',function (req, res)
   console.log(account[i].newvalue);
   console.log('end');
 }
-console.log(account);
-  res.send(account);
+var account1=json.parse(req.body);
+ console.log(req.body);
+ console.log(account);
+  for(var i=0;i<account.length;i++)
+  {
+    console.log('start1');
+  account1[i].newvalue = account1[i].Id+'     '+account1[i].Name+'    '+account1[i].Site;
+  console.log(account1[i].newvalue);
+  console.log('end1');
+}
+console.log(account1);
+  res.send(account1);
  /*var account=[{
   "attributes":{"type":"Account","url":"/services/data/v43.0/sobjects/Account/0017F00000snrOrQAI"},
   "Id":"0017F00000snrOrQAI",
