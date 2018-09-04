@@ -19,8 +19,8 @@ app.post('/accountupdate',function (req, res)
 //var account1=JSON.parse(req.body[0]);
 var account1=JSON.stringify(req.body);
  console.log(req.body);
- console.log(account);
-  for(var i=0;i<account.length;i++)
+ console.log(account1);
+  for(var i=0;i<account1.length;i++)
   {
     console.log('start1');
   account1[i].newvalue = account1[i].Id+'     '+account1[i].Name+'    '+account1[i].Site;
