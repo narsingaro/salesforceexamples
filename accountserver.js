@@ -10,7 +10,10 @@ app.post('/accountupdate',function (req, res)
  console.log(account);
   for(var i=0;i<account.length;i++)
   {
+    console.log('start');
   account[i].newvalue = account[i].Id+'     '+account[i].Name+'    '+account[i].Site;
+  console.log(account[i].newvalue);
+  console.log('end');
 }
 console.log(account);
   res.send(account);
