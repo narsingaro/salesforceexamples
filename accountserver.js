@@ -24,16 +24,11 @@ app.post('/accountupdate',function (req, res)
 {
   if(key!='attributes')
   {
-    j=0
-    console.log(key);
-    console.log()
     console.log(account[i][key]);
-    console.log(account[j].Id);
-    text=text + account[i].key+' ';
+    text=text + account[i][key]+' ';
     console.log(text);
   }
 }
-j++;
 account[i].newvalue__c=text;
 }
 //var account1=JSON.parse(req.body[0]);
