@@ -12,8 +12,8 @@ app.post('/accountupdate',function (req, res)
   for(var i=0;i<account.length;i++)
   {
     console.log('start');
-  account[i].newvalue = account[i].Id+'     '+account[i].Name+'    '+account[i].Site;
-  console.log(account[i].newvalue);
+  account[i].newvalue__c = account[i].Id+'     '+account[i].Name+'    '+account[i].Site;
+  console.log(account[i].newvalue__c);
   console.log('end');
 }
 //var account1=JSON.parse(req.body[0]);
