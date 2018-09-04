@@ -5,8 +5,8 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }))
 app.post('/accountupdate',function (req, res)
 {
- var account=req.body;
- console.log(req.body);
+ var account=JSON.parse(req.body.s);
+ console.log(req.body.s);
  console.log(typeof(req.body));
  console.log(account);
   for(var i=0;i<account.length;i++)
@@ -17,7 +17,7 @@ app.post('/accountupdate',function (req, res)
   console.log('end');
 }
 //var account1=JSON.parse(req.body[0]);
-var account1=JSON.stringify(req.body);
+/*var account1=JSON.stringify(req.body);
  console.log(req.body);
  console.log(account1);
   for(var i=0;i<account1.length;i++)
@@ -26,7 +26,7 @@ var account1=JSON.stringify(req.body);
   account1[i].newvalue = account1[i].Id+'     '+account1[i].Name+'    '+account1[i].Site;
   console.log(account1[i].newvalue);
   console.log('end1');
-}
+}*/
 console.log(account1);
   res.send(account1);
  /*var account=[{
