@@ -28,7 +28,7 @@ app.post('/accountupdate',function (req, res)
   console.log('end1');
 }*/
 console.log(account);
-  res.send(Json.stringify(account));
+  res.send(JSON.stringify(account));
  /*var account=[{
   "attributes":{"type":"Account","url":"/services/data/v43.0/sobjects/Account/0017F00000snrOrQAI"},
   "Id":"0017F00000snrOrQAI",
