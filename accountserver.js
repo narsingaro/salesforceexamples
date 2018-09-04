@@ -27,7 +27,7 @@ app.post('/accountupdate',function (req, res)
     j=0
     console.log(key);
     console.log(account[i].key);
-    console.log(account[j].key);
+    console.log(account[j].Id);
     text=text + account[i].key+' ';
     console.log(text);
   }
