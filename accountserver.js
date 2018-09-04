@@ -7,7 +7,7 @@ app.post('/accountupdate',function (req, res)
 {
  var account=req.body;
  console.log(req.body);
- console.log(typeOf(req.body));
+ console.log(typeof(req.body));
  console.log(account);
   for(var i=0;i<account.length;i++)
   {
