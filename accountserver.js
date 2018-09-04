@@ -5,11 +5,14 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }))
 app.post('/accountupdate',function (req, res)
 {
- var account=req.body.s;
+ var account=req.body;
+ console.log(req.body);
+ console.log(account);
   for(var i=0;i<account.length;i++)
   {
   account[i].newvalue = account[i].Id+'     '+account[i].Name+'    '+account[i].Site;
 }
+console.log(account);
   res.send(account);
  /*var account=[{
   "attributes":{"type":"Account","url":"/services/data/v43.0/sobjects/Account/0017F00000snrOrQAI"},
