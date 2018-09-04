@@ -24,7 +24,10 @@ app.post('/accountupdate',function (req, res)
 {
   if(key!='attributes')
   {
+    console.log(key);
+    console.log(account[i].key);
     text=text + account[i].key+' ';
+    console.log(text);
   }
 }
 account[i].newvalue__c=text;
