@@ -3,6 +3,12 @@ var url =require('url');
 var app = express();
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }))
+app.use(function(req, res, next) {
+ res.header('Access-Control-Allow-Methods' , 'GET,PUT,POST,DELETE');
+res.header('Access-Control-Allow-Headers', '*,Accept,Content-Type,sessionid,serverurl, Content-Range, Content-Disposition, Content-Description, Content-Language,Content-Length,Cache-Control,Last-Modified');
+  res.header('Access-Control-Allow-Origin', '*');
+ next();
+});
 app.post('/accountupdate',function (req, res)
 {
  var account=JSON.parse(req.body.s);
